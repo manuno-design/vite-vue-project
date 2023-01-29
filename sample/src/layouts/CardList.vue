@@ -5,7 +5,7 @@ import { getYoutubeData } from '../api/youtube';
 import { youtubeItems } from '../types/type';
 import { ConsoleWriter } from 'istanbul-lib-report';
 
-const cards: Ref<youtubeItems> = ref();
+const cards: Ref<youtubeItems[]> = ref([]);
 const getData = async () => {
     const res = await getYoutubeData('ベース');
     cards.value = res.items
@@ -22,7 +22,7 @@ onMounted(() => {
     <v-col
         v-for="card in cards"
         :key="card.id.videoId"
-        cols="5"
+        cols="6"
     >
         <Card :card="card" />
     </v-col>

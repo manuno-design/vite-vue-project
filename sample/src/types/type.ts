@@ -1,24 +1,24 @@
 interface thumbnails {
-    url: String,
-    height: Number,
-    width: Number
+    url: string,
+    height: number,
+    width: number
 }
 
 export interface youtubeItems {
-    kind: String,
-    etag: String,
+    kind: string,
+    etag: string,
     id: {
-        kind: String,
-        videoId: String
+        kind: string,
+        videoId: string
     },
     snippet: {
-        title: String,
-        channelId: String,
-        channelTitle: String,
-        description: String,
-        liveBroadcastContent: String,
-        publishTime: String,
-        publishedAt: String,
+        title: string,
+        channelId: string,
+        channelTitle: string,
+        description: string,
+        liveBroadcastContent: string,
+        publishTime: string,
+        publishedAt: string,
         thumbnails: {
             default: thumbnails,
             medium: thumbnails,
@@ -28,13 +28,13 @@ export interface youtubeItems {
 }
 
 export interface youtubeData {
-    kind: String,
-    etag: String,
-    nextPageToken: String,
-    prevPageToken: String,
+    kind: string,
+    etag: string,
+    nextPageToken: string,
+    prevPageToken: string,
     pageInfo: {
-      totalResults: Number,
-      resultsPerPage: Number
+      totalResults: number,
+      resultsPerPage: number
     },
     items: youtubeItems[]
 }
