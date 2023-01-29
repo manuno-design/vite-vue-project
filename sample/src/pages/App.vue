@@ -1,21 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from '../layouts/HelloWorld.vue'
+import CardList from '../layouts/CardList.vue'
 import AppBar from '../components/AppBar.vue'
 </script>
 
 <template>
   <v-app>
-    <AppBar title="sample" color="primary" />
+    <AppBar title="Youtube Search" color="red" />
     <v-main>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://vuejs.org/" target="_blank">
-          <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
-        </a>
-      </div>
-      <HelloWorld msg="Vite + Vue" />
+      <CardList />
     </v-main>
 </v-app>
 </template>
